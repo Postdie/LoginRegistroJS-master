@@ -1,7 +1,7 @@
 //declarar variables para vincular los objetos de formulario
-const usuario = document.getElementsById('user');
-const password = document.getElementsById('pass');
-const formulario = document.getElementsById('formLogin');
+const usuario = document.getElementById('user');
+const password = document.getElementById('pass');
+const formulario = document.getElementById('formLogin');
 
 //Generando eventos
 formulario.addEventListener('submit', login);

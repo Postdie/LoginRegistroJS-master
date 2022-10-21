@@ -1,9 +1,9 @@
 //declaracion de variables de referencia a objetos
-const nombre = document.getElementsById('name');
-const email = document.getElementsById('email');
-const user = document.getElementsById('user');
-const pass = document.getElementsById('pass');
-const formulario = document.getElementsById('formRegistro');
+const nombre = document.getElementById('name');
+const email = document.getElementById('email');
+const user = document.getElementById('user');
+const pass = document.getElementById('pass');
+const formulario = document.getElementById('formRegistro');
 
 formulario.addEventListener('submit', registro);
 
