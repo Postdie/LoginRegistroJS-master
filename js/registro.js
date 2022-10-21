@@ -7,7 +7,7 @@ const formulario = document.getElementsById('formRegistro');
 
 formulario.addEventListener('submit', registro);
 
-function registro(e);{
+function registro(e){
     e.preventDefault();
 
     let nombreVal = nombre.value;
@@ -38,13 +38,3 @@ creaMensaje('Usuario Registrado!', 'success');
 
 }
 
-function creaMensaje(texto, tipo){
-    const nuevoElemento = document.createElement('div');
-    nuevoElemento.innerText = texto;
-    nuevoElemento.classList.add('alert', 'alert-' + tipo);
-    const divMensaje = document.getelementsById('mensaje');
-    divMensaje.appendChild(nuevoElemento);
-    setTimeout(function(){
-        nuevoElemento.remove();
-    }, 4000);
-}

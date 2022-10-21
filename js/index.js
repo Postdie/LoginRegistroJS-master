@@ -7,17 +7,26 @@ const formulario = document.getElementsById('formLogin');
 formulario.addEventListener('submit', login);
 
 //funciones a ejecutar
-function login(e);
+function login(e){
     e.preventDefault();
     
     let usuarioVal = usuario.value;
     let passwordVal = password.value;
 
-    if(usuarioVal == '' || passwordVal == '');{
+    if(usuarioVal == '' || passwordVal == ''){
+        creaMensaje('verifica tus datos', 'danger');
         return;
     }
+    if(localStorage.getItem('usuario')){
+        let objeto = JSON.parse(localStorage.getItem('usuario'));
 
-    console.log('el valor para user es:' + usuarioVal);
-    console.log('el valor para pass es:' + passwordVal);
-
+        if(usuarioVal == objeto.user && passwordVal == objeto.pass){
+            creaMensaje(`Login Correcto`, 'success');
+        } else {
+            creaMensaje('usuario incorrecto', 'danger');
+        }
+    } else {
+        creaMensaje('No hay usuario registrados', 'danger');
+}
     
+}   
